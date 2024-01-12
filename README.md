@@ -21,12 +21,61 @@ Nuestro propósito es simplificar procesos laboriosos para las empresas, mejoran
 
 ## Objetivos a corto plazo
 
-- Pensar como nos vamos a mover de el index ya creado a la pagina de creacion de la pagina
-- Crear la pagina de Logeo la de pago la con la seguridad de laravel (Angel)
-- Crear el estndadar de plantilla de la pagina web sobre la que se van a creear los cambios incluyendo cosas como el carrito secciones etc (chema)
-- Crear el programa el cual va a enviar los datos a la plantilla y colocarlo en el sitio que se especifica
-- Crear un servidor para que se aloje el proyecto(ferri)
-- Crear la configuracion de odoo para que el usuario pueda personalizar y meter sus porductos de forma facil y simple
+### 1. Navegación de Index a Página de Creación (Antonio Martin)
+   - **Análisis:**
+     - Identifica la ubicación y el contexto en el que se debe agregar el enlace para navegar a la página de creación es decir donde va a aparecer el boton de comprar si en el index o en otra pagina si hace falta estr logeado para pagar pensar cuantas paginas webs se necesitan y otros posibles contratiempos.
+   - **Implementación:**
+     - Agrega un enlace o botón en el index que redireccione a la página de creación.
+     - Lo mas importante es pensar bien la estructuracion de las paginas.
+
+### 2. Página de Logeo con Seguridad de Laravel (Abraham)
+   - **Análisis:**
+     - Define los requisitos y características de la página de inicio de sesión.
+   - **Implementación:**
+     - Crea las vistas HTML, el controlador y las rutas en Laravel.
+     - Implementa la seguridad de Laravel, como la autenticación.
+
+### 3. Página de Pago con Seguridad de Laravel (Antonio/Abraham el primero que llegue)
+   - **Análisis:**
+     - Define los requisitos y características de la página de pago.
+   - **Implementación:**
+     - Crea las vistas HTML, el controlador y las rutas en Laravel.
+     - Implementa la seguridad de Laravel, especialmente para las transacciones de pago.
+
+### 4. Entender la Base de Datos PostgreSQL
+   - **Aprendizaje:**
+     - Investiga sobre PostgreSQL, su estructura y sintaxis SQL.
+     - Familiarízate con cómo interactuar con PostgreSQL desde Laravel.
+
+### 5. Crear Categorías/Secciones para Tiendas
+   - **Planificación:**
+     - Enumera y define las categorías o secciones que podrían aparecer en las tiendas.
+     - Considera la estructura jerárquica si es necesario.
+
+### 6. Crear Base de Datos NoSQL en Odoo para Pruebas
+   - **Configuración:**
+     - Configura una base de datos NoSQL en Odoo para realizar pruebas.
+     - Comprende cómo se crea automáticamente y familiarízate con su estructura.
+
+### 7. Estándar de Plantilla de la Página Web 
+   - **Diseño:**
+     - Define un estándar de plantilla que incluya elementos como el carrito, secciones, etc.
+     - Puede ser en formato de diseño o descripción de características.
+
+### 8. Programa para Enviar Datos a la Plantilla 
+   - **Desarrollo:**
+     - Crea un programa que envíe datos a la plantilla web.
+     - Implementa funcionalidades administrativas para añadir y editar fácilmente.
+
+### 9. Crear Servidor para Alojar el Proyecto (Ferri)
+   - **Configuración:**
+     - Configura un servidor para alojar el proyecto web.
+     - Asegúrate de que el entorno cumpla con los requisitos de Laravel y PostgreSQL.
+
+### 10. Configuración de Odoo para Personalización de Productos 
+   - **Guía de Configuración:**
+     - Documenta una guía simple y fácil para que los usuarios configuren y personalicen sus productos en Odoo.
+
   
 
 ## Instalación
