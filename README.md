@@ -21,12 +21,13 @@ Nuestro propósito es simplificar procesos laboriosos para las empresas, mejoran
 
 ## Objetivos a corto plazo
 
-### 1. Navegación de Index a Página de Creación (Antonio Martin)
+### 1. Navegación de Index a Página de Creación y gestion del formulario de contacto (Antonio Martin)
    - **Análisis:**
      - Identifica la ubicación y el contexto en el que se debe agregar el enlace para navegar a la página de creación es decir donde va a aparecer el boton de comprar si en el index o en otra pagina si hace falta estr logeado para pagar pensar cuantas paginas webs se necesitan y otros posibles contratiempos.
    - **Implementación:**
      - Agrega un enlace o botón en el index que redireccione a la página de creación.
      - Lo mas importante es pensar bien la estructuracion de las paginas.
+     - Solucionar el error con el formulario de contacto
 
 ### 2. Página de Logeo con Seguridad de Laravel (Abraham)
    - **Análisis:**
