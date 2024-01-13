@@ -210,24 +210,24 @@
             <div class="row">
                 <div class="col-md-6 form-line">
                     <div class="form-group">
-                        <label for="exampleInputUsername">Your name</label>
-                        <label for=""></label><input type="text" class="form-control" id="" placeholder=" Enter Name">
+                        <label for="exampleInputUsername">Nombre</label>
+                        <label for=""></label><input type="text" class="form-control" id="" placeholder="Introduce tu nombre">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputEmail">Email Address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail" placeholder=" Enter Email id">
+                        <label for="exampleInputEmail">Email</label>
+                        <input type="email" class="form-control" id="exampleInputEmail" placeholder="Introduce tu email">
                     </div>
                     <div class="form-group">
-                        <label for="telephone">Mobile No.</label>
-                        <input type="tel" class="form-control" id="telephone" placeholder=" Enter 10-digit mobile no.">
+                        <label for="telephone">Número telefono</label>
+                        <input type="tel" class="form-control" id="telephone" placeholder="Introduce tu número de telefono">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for ="description"> Message</label>
-                        <textarea  class="form-control" id="description" placeholder="Enter Your Message"></textarea>
+                        <label for ="description">Mensaje</label>
+                        <textarea  class="form-control" id="description" placeholder="Introduce tu mensaje"></textarea>
                     </div>
-                    <button type="button" class="btn btn-primary submit"><i class="fa fa-paper-plane" aria-hidden="true"></i>  Send Message</button>
+                    <button type="button" class="btn btn-primary submit"><i class="fa fa-paper-plane" aria-hidden="true"></i>Enviar Mensaje</button>
                 </div>
             </div>
         </form>
