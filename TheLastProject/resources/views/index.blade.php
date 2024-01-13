@@ -72,11 +72,11 @@
             <h2>¿Quienes somos?</h2>
             <div class="line-shape"></div>
             <p>
-            Somos expertos en la creación de páginas web impactantes y sistemas de gestión empresarial personalizados.
-            Nos dedicamos a impulsar el éxito empresarial a través de soluciones digitales y Nos apasiona colaborar
-            estrechamente con nuestros clientes para transformar sus ideas en resultados tangibles.
-            Con un equipo altamente capacitado, estamos aquí para simplificar y potenciar tu presencia
-            en línea y eficiencia operativa.
+                Somos expertos en la creación de páginas web impactantes y sistemas de gestión empresarial personalizados.
+                Nos dedicamos a impulsar el éxito empresarial a través de soluciones digitales y Nos apasiona colaborar
+                estrechamente con nuestros clientes para transformar sus ideas en resultados tangibles.
+                Con un equipo altamente capacitado, estamos aquí para simplificar y potenciar tu presencia
+                en línea y eficiencia operativa.
             </p>
         </div>
     </div>
@@ -212,19 +212,19 @@
                 <div class="col-md-6 form-line">
                     <div class="form-group">
                         <label for="exampleInputUsername">Nombre</label>
-                            <input type="text" class="form-control" name="nombre" id="exampleInputUsername" placeholder="Introduce tu nombre">
+                        <input type="text" class="form-control" name="nombre" id="exampleInputUsername" placeholder="Introduce tu nombre">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail">Email</label>
-                            <input type="email" class="form-control" name="email" id="exampleInputEmail" placeholder="Introduce tu email">
+                        <input type="email" class="form-control" name="email" id="exampleInputEmail" placeholder="Introduce tu email">
                     </div>
                     <div class="form-group">
                         <label for="telephone">Número telefono</label>
-                            <input type="tel" class="form-control" name="telefono" id="telephone" placeholder="Introduce tu número de telefono">
+                        <input type="tel" class="form-control" name="telefono" id="telephone" placeholder="Introduce tu número de telefono">
                     </div>
                     <div class="form-group">
                         <label for="description">Mensaje</label>
-                            <textarea class="form-control" name="mensaje" id="description" placeholder="Introduce tu mensaje"></textarea>
+                        <textarea class="form-control" name="mensaje" id="description" placeholder="Introduce tu mensaje"></textarea>
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary submit">

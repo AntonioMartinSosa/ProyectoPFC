@@ -22,3 +22,7 @@ Route::get('/index', function () {
 });
 
 Route::post('/guardar-mensaje', 'IndexController@guardarMensaje');
+
+Route::get('/login', function () {
+    return view('login');
+});
