@@ -52,14 +52,14 @@
 </nav>
 <header class="background-main">
     <main class="main">
-        <h1 class="main-title">Web is
+        <h1 class="main-title" id="page-top">Web is
             <a href="" class="typewrite" data-period="3000" data-type='[ "Creative", "Future", "Enterteinment", "Freedom" ]'>
                 <span class="wrap"></span>
             </a>
         </h1>
     </main>
     <div class="text-center">
-        <a class="main-link btn btn-lg"  href="#about">
+        <a class="main-link btn btn-lg" href="#about">
             Descubrenos
             <i class="fa fa-chevron-down"></i>
         </a>
@@ -206,28 +206,31 @@
         </div>
     </div>
     <div class="container">
-        <form>
+        <form method="post" action="{{ url('/guardar-mensaje') }}">
+            @csrf
             <div class="row">
                 <div class="col-md-6 form-line">
                     <div class="form-group">
                         <label for="exampleInputUsername">Nombre</label>
-                        <label for=""></label><input type="text" class="form-control" id="" placeholder="Introduce tu nombre">
+                            <input type="text" class="form-control" name="nombre" id="exampleInputUsername" placeholder="Introduce tu nombre">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail">Email</label>
-                        <input type="email" class="form-control" id="exampleInputEmail" placeholder="Introduce tu email">
+                            <input type="email" class="form-control" name="email" id="exampleInputEmail" placeholder="Introduce tu email">
                     </div>
                     <div class="form-group">
                         <label for="telephone">Número telefono</label>
-                        <input type="tel" class="form-control" id="telephone" placeholder="Introduce tu número de telefono">
+                            <input type="tel" class="form-control" name="telefono" id="telephone" placeholder="Introduce tu número de telefono">
                     </div>
-                </div>
-                <div class="col-md-6">
                     <div class="form-group">
-                        <label for ="description">Mensaje</label>
-                        <textarea  class="form-control" id="description" placeholder="Introduce tu mensaje"></textarea>
+                        <label for="description">Mensaje</label>
+                            <textarea class="form-control" name="mensaje" id="description" placeholder="Introduce tu mensaje"></textarea>
                     </div>
-                    <button type="button" class="btn btn-primary submit"><i class="fa fa-paper-plane" aria-hidden="true"></i>Enviar Mensaje</button>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary submit">
+                            <i class="fa fa-paper-plane" aria-hidden="true"></i> Enviar Mensaje
+                        </button>
+                    </div>
                 </div>
             </div>
         </form>
