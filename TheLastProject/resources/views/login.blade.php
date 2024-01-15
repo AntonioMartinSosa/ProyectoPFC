@@ -8,6 +8,7 @@
     <!-- Agrega aquí tus enlaces a las hojas de estilo y scripts necesarios -->
     <link rel="stylesheet" href="{{ asset('css/login.css') }}">
     <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
+    @livewireStyles
 
 </head>
 <body>
@@ -138,7 +139,7 @@
         <button id="login">Log in</button>
     </div>
 </form>
-
+@livewireStyles
 <!-- Agrega aquí las referencias a tus archivos CSS y JavaScript -->
 <script src="{{ asset('js/login.js') }}"></script>
 

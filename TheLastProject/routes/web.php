@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\IndexController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,7 +22,7 @@ Route::get('/index', function () {
     return view('index');
 });
 
-Route::post('/guardar-mensaje', 'IndexController@guardarMensaje');
+Route::post('/guardar-mensaje', [IndexController::class, "guardarMensaje"]);
 
 Route::get('/login', function () {
     return view('login');
