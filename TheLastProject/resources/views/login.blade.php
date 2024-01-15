@@ -139,6 +139,13 @@
         <button id="login">Log in</button>
     </div>
 </form>
+
+
+<form method="POST" action="{{ url('/index') }}">
+    @csrf
+    <button type="submit">Cerrar sesión</button>
+</form>
+
 @livewireStyles
 <!-- Agrega aquí las referencias a tus archivos CSS y JavaScript -->
 <script src="{{ asset('js/login.js') }}"></script>

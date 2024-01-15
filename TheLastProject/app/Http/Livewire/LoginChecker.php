@@ -8,6 +8,13 @@ use Illuminate\Support\Facades\Auth;
 class LoginChecker extends Component
 {
     public $isLoggedIn;
+    public $email;
+    public $password;
+
+    protected $rules = [
+        'email' => 'required|email',
+        'password' => 'required',
+    ];
 
     public function render()
     {
@@ -22,4 +29,14 @@ class LoginChecker extends Component
         $this->isLoggedIn = false;
     }
 
+    public function login()
+    {
+        $this->validate();
+
+        if (Auth::attempt(['email' => $this->email, 'password' => $this->password])) {
+            $this->isLoggedIn = true;
+        } else {
+            $this->addError('email', 'Credenciales incorrectas. Por favor, inténtalo de nuevo.');
+        }
+    }
 }

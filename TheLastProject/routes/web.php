@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\IndexController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\AuthController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,6 +24,11 @@ Route::get('/index', function () {
 
 Route::post('/guardar-mensaje', [IndexController::class, "guardarMensaje"]);
 
-Route::get('/login', function () {
-    return view('login');
-});
+// routes/web.php
+
+
+
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [AuthController::class, 'login']);
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
