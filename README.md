@@ -27,7 +27,7 @@ Nuestro propósito es simplificar procesos laboriosos para las empresas, mejoran
    - **Implementación:**
      - Agrega un enlace o botón en el index que redireccione a la página de creación.
      - Lo mas importante es pensar bien la estructuracion de las paginas.
-     - Solucionar el error con el click de la navbar
+     - Agregar hiperenlace de las redes sociales
 
 ### 2. Página de Logeo con Seguridad de Laravel (Abraham)
    - **Análisis:**

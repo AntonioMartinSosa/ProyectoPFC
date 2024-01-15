@@ -11,7 +11,7 @@
 }
 
 .navbar-brand.js-scroll-trigger {
-    padding-right: 500px;
+    margin-right: 500px;
 }
 
 .navbar-light .container a, .navbar-light .container .collapse .navbar-nav .nav-item .nav-link{
