@@ -2,12 +2,16 @@
     --primary-font-color1: #ffffff;
     --primary-font-color2: #007bff;
 }
-
+/*navbar*/
 .navbar-light {
     padding-top: 1rem;
     padding-bottom: 1rem;
     background-color: rgba(0,0,0,.7);
 
+}
+
+.navbar-brand.js-scroll-trigger {
+    padding-right: 500px;
 }
 
 .navbar-light .container a, .navbar-light .container .collapse .navbar-nav .nav-item .nav-link{
@@ -17,9 +21,10 @@
 }
 
 .navbar-logo{
-    width: 10%;
-    height: 10%;
+    width: 40%;
+    height: 40%;
 }
+/*navbar*/
 
 .background-main{
     height: 100vh;

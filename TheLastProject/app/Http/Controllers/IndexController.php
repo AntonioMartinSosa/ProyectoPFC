@@ -14,11 +14,7 @@ class IndexController extends Controller
 
     public function guardarMensaje(Request $request)
     {
-        // Lógica para guardar el mensaje aquí
-        $clienteId = $request->input('cliente_id');
-
         $mensaje = new Mensaje();
-        $mensaje->cliente_id = $clienteId;
         $mensaje->nombre = $request->input('nombre');
         $mensaje->email = $request->input('email');
         $mensaje->telefono = $request->input('telefono');

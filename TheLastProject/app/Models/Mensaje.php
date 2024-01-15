@@ -10,6 +10,6 @@ class Mensaje extends Model
     use HasFactory;
 
     protected $table = 'mensajes';
-    protected $fillable = ['cliente_id', 'nombre', 'email', 'telefono', 'mensaje'];
+    protected $fillable = ['nombre', 'email', 'telefono', 'mensaje'];
 
 }
