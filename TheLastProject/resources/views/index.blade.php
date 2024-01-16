@@ -212,7 +212,7 @@
         <form method="post" action="{{ url('/guardar-mensaje') }}">
             @csrf
             <div class="row">
-                <div class="col-md-6 form-line">
+                <div class="col-md-12 form-line">
                     <div class="form-group">
                         <label for="exampleInputUsername">Nombre</label>
                         <input type="text" class="form-control" name="nombre" id="exampleInputUsername" placeholder="Introduce tu nombre">
@@ -245,23 +245,8 @@
     <div class="container">
         <ul class="list-inline mb-5">
             <li class="list-inline-item">
-                <a class="social-link rounded-circle text-white mr-3" href="#">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-            </li>
-            <li class="list-inline-item">
-                <a class="social-link rounded-circle text-white mr-3" href="#">
-                    <i class="fab fa-twitter"></i>
-                </a>
-            </li>
-            <li class="list-inline-item">
-                <a class="social-link rounded-circle text-white" href="#">
+                <a class="social-link rounded-circle text-white" href="https://github.com/AntonioMartinSosa/ProyectoPFC">
                     <i class="fab fa-github"></i>
-                </a>
-            </li>
-            <li class="list-inline-item">
-                <a class="social-link rounded-circle text-white" href="#">
-                    <i class="fab fa-instagram"></i>
                 </a>
             </li>
         </ul>

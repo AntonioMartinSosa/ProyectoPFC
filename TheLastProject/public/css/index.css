@@ -122,6 +122,9 @@
     clip-path: polygon(0 0, 100% 7%, 100% 100%, 0 94%);
 }
 
+.col-md-6.form-line{
+    width: 100%;
+}
 
 footer.footer .social-link {
     display: block;
