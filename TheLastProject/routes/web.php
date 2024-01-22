@@ -26,9 +26,4 @@ Route::post('/guardar-mensaje', [IndexController::class, "guardarMensaje"]);
 
 // routes/web.php
 
-
-
-Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
-Route::post('/login', [AuthController::class, 'login']);
-Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
-
+Route::view('login', 'livewire.home');
