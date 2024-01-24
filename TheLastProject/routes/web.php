@@ -30,5 +30,5 @@ Route::post('/generar-pagina', [FormularioController::class, "generarPagina"]);
 
 Route::post('/guardar-mensaje', [IndexController::class, "guardarMensaje"]);
 
-Route::view('logins', 'livewire.home');
+Route::view('login', 'livewire.home');
 //Cambiar a '/' para que salga al principio o otra cosa

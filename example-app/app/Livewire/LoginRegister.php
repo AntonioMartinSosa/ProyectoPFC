@@ -24,7 +24,7 @@ class LoginRegister extends Component
         $this->password = '';
     }
 
-    public function login()
+    public function login(): void
     {
         $validatedData = $this->validate([
             'email' => 'required|email',

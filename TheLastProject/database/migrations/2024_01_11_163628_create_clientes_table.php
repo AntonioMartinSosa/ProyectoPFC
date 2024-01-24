@@ -17,9 +17,11 @@ class CreateClientesTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('nombre_empresa');
             $table->string('telefono');
+            $table->rememberToken();
             $table->timestamps();
         });
     }
