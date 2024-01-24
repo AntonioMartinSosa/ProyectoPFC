@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FormularioController;
 use App\Http\Controllers\IndexController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
@@ -14,6 +15,8 @@ use App\Http\Controllers\AuthController;
 |
 */
 
+// routes/web.php
+
 Route::get('/', function () {
     return view('index');
 });
@@ -22,8 +25,10 @@ Route::get('/index', function () {
     return view('index');
 });
 
+Route::get('/formulario', [FormularioController::class, "index"]);
+Route::post('/generar-pagina', [FormularioController::class, "generarPagina"]);
+
 Route::post('/guardar-mensaje', [IndexController::class, "guardarMensaje"]);
 
-// routes/web.php
-
-Route::view('login', 'livewire.home');
+Route::view('logins', 'livewire.home');
+//Cambiar a '/' para que salga al principio o otra cosa

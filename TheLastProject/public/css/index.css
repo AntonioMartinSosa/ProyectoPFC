@@ -17,7 +17,7 @@
 .navbar-light .container a, .navbar-light .container .collapse .navbar-nav .nav-item .nav-link{
     color: var(--primary-font-color1);
     white-space: nowrap;
-    
+
 }
 
 .navbar-logo{

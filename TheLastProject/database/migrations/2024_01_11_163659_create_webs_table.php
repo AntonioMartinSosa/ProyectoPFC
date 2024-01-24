@@ -17,6 +17,11 @@ class CreateWebsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('client_id'); // ID del cliente (clave externa)
             $table->foreign('client_id')->references('id')->on('clientes');
+            $table->string('color_principal');
+            $table->string('color_secundario');
+            $table->string('logo_path')->nullable();
+            $table->text('productos');
+
             $table->timestamps();
         });
     }

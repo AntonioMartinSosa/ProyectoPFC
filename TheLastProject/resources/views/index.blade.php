@@ -29,11 +29,13 @@
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
             <img src="{{ asset('images/logo/l-1.png') }}" alt="Logo" class="navbar-logo"> WebMy
         </a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" 
-        data-toggle="collapse" data-target="#navbarResponsive" 
-        aria-controls="navbarResponsive" aria-expanded="false" 
+        <button class="navbar-toggler navbar-toggler-right" type="button"
+        data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false"
         aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon">
+                <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
+            </span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
@@ -48,6 +50,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#contact">Contactanos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="/formulario">TU PAGINA WEB</a>
                 </li>
             </ul>
         </div>
