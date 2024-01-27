@@ -87,7 +87,7 @@
             </div>
 
             <div class="text-center mt-3">
-                <p class="text-muted">¿No tienes cuenta? <a class="btn btn-primary btn-sm" wire:click.prevent="register"><strong>Regístrate</strong></a></p>
+                <p class="text-muted">¿No tienes cuenta?</p> <a class="btn btn-primary btn-sm" wire:click.prevent="register"><strong>Regístrate</strong></a>
             </div>
         </form>
     @endif

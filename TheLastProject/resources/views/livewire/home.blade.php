@@ -21,11 +21,12 @@
 
     <style>
         body {
-            background: linear-gradient(to right, #3498db, #2c3e50); /* Fondo degradado atractivo */
-            color: #fff; /* Texto en color claro para contrastar con el fondo */
-            font-family: 'Arial', sans-serif; /* Tipo de fuente elegante y legible */
-            margin-top: 50px; /* Espaciado superior para mejorar la visualización */
+            background: linear-gradient(to right, #3498db, #2c3e50);
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            margin-top: 50px;
         }
+
 
 
         .card {
@@ -35,60 +36,65 @@
         }
 
         .card-header {
-            background: linear-gradient(to right, #3498db, #2c3e50); /* Degradado azul atractivo */
+            background: linear-gradient(to right, #3498db, #2c3e50);
             color: #fff;
             border-bottom: none;
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
-            padding: 20px;
+            padding: 30px 20px; /* Aumenté el espacio superior e inferior para mayor impacto visual */
+            text-align: center;
         }
 
         .card-body {
-            background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente para contenido */
+            background-color: rgba(255, 255, 255, 0.9);
             border-bottom-left-radius: 10px;
             border-bottom-right-radius: 10px;
-            padding: 20px;
+            padding: 30px 20px; /* Aumenté el espacio superior e inferior para mayor impacto visual */
         }
 
         .form-label {
-            color: #333; /* Color de texto oscuro para etiquetas de formulario */
+            color: #333;
         }
 
         .btn-primary {
-            background-color: #3498db; /* Color azul brillante para botones */
-            border-color: #3498db; /* Borde del mismo color que el fondo */
-            font-weight: bold; /* Texto más grueso para resaltar */
+            background-color: #3498db;
+            border-color: #3498db;
+            font-weight: bold;
         }
 
         .btn-primary:hover {
-            background-color: #2980b9; /* Color azul más oscuro al pasar el ratón */
+            background-color: #2980b9;
             border-color: #2980b9;
         }
 
         .btn-success {
-            background-color: #2ecc71; /* Color verde para botones de éxito */
+            background-color: #2ecc71;
             border-color: #2ecc71;
-            font-weight: bold; /* Texto más grueso para resaltar */
+            font-weight: bold;
         }
 
         .btn-success:hover {
-            background-color: #27ae60; /* Color verde más oscuro al pasar el ratón */
+            background-color: #27ae60;
             border-color: #27ae60;
         }
 
         .btn-block {
-            border-radius: 10px; /* Bordes redondeados para botones de ancho completo */
-            margin-top: 15px; /* Espaciado superior para separar los botones */
+            border-radius: 10px;
+            margin-top: 20px; /* Aumenté el espacio superior para separar los botones */
         }
 
         .btn-sm {
-            font-size: 14px; /* Tamaño de fuente más pequeño para botones pequeños */
+            font-size: 14px;
         }
 
         .text-muted {
-            font-size: 14px; /* Tamaño de fuente más pequeño para texto de menor importancia */
+            font-size: 14px;
+            margin-top: 10px; /* Aumenté el espacio superior para separar el texto inferior */
         }
     </style>
+
+    <link rel="icon" href="{{ asset('images/logo/favicon.ico') }}">
+
 </head>
 
 <body>
@@ -96,7 +102,7 @@
     <div class="row justify-content-center">
         <div class="col-md-6">
             <div class="card">
-                <div class="card-header text-center">
+                <div class="card-header">
                     <h4 class="mb-0">Iniciar Sesión</h4>
                     <p class="mb-0">Accede a tu cuenta para explorar nuestras herramientas.</p>
                 </div>
