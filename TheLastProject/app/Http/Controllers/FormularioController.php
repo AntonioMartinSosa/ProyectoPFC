@@ -40,7 +40,9 @@ class FormularioController extends Controller
         $colorSecundario = $request->input('colorSecundario');
         $logo = $request->file('logo');
         $productos = $request->input('productos');
+        $productos_formateados = explode(", ", $productos);
 
-        return view('pagina_web', compact('colorPrincipal', 'colorSecundario', 'logo', 'productos'));
+        return view('pagina_web',
+            compact('colorPrincipal', 'colorSecundario', 'logo', 'productos_formateados'));
     }
 }

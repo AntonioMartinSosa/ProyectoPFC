@@ -9,23 +9,61 @@
             background-color: {{ $colorPrincipal }};
             color: {{ $colorSecundario }};
             font-family: Arial, sans-serif;
-            margin: 20px;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            color: {{ $colorSecundario }};
+            text-align: center;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .logo {
+            display: block;
+            max-width: 200px;
+            margin: 20px auto;
         }
     </style>
 </head>
 <body>
 
-    <h2>Página Web Generada</h2>
+    <div class="container">
+        <h2>Página Web Generada</h2>
 
-    <p>Color Principal: {{ $colorPrincipal }}</p>
-    <p>Color Secundario: {{ $colorSecundario }}</p>
-    <p>Productos:</p>
-    <pre>{{ $productos }}</pre>
+        <table>
+            <thead>
+                <tr>
+                    <th>Productos</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($productos_formateados as $producto)
+                <tr>
+                    <td>{{ $producto }}</td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
 
-    <!-- Puedes mostrar el logo si es necesario -->
-    @if($logo)
-        <img src="{{ asset('storage/'.$logo->store('logos', 'public')) }}" alt="Logo">
-    @endif
+        @if($logo)
+            <img class="logo" src="{{ asset('storage/'.$logo->store('logos', 'public')) }}" alt="Logo">
+        @endif
+    </div>
 
 </body>
 </html>

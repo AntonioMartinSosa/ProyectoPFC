@@ -83,7 +83,7 @@
             </div>
 
             <div class="text-center">
-                <button type="button" class="btn btn-success btn-block" wire:click.prevent="login">Iniciar Sesión</button>
+                <button type="button" class="btn btn-success btn-block" wire:click.prevent="redirectToFormulario">Iniciar Sesión</button>
             </div>
 
             <div class="text-center mt-3">

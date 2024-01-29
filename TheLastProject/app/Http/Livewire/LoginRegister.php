@@ -4,8 +4,9 @@ namespace App\Http\Livewire;
 
 use App\Models\Clientes;
 use Livewire\Component;
-use Illuminate\Support\Facades\Auth; // Agrega esta línea
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Redirect;
 
 class LoginRegister extends Component
 {
@@ -77,5 +78,10 @@ class LoginRegister extends Component
 
         session()->flash('message', 'Register successful');
         $this->resetInputFields();
+    }
+
+    public function redirectToFormulario()
+    {
+        return Redirect::to('/formulario');
     }
 }
