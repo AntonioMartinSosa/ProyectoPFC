@@ -17,6 +17,11 @@ class LoginRegister extends Component
         return view('livewire.login-register');
     }
 
+    public function devolverEstado(): bool
+    {
+        return $this->registerForm;
+    }
+
     private function resetInputFields()
     {
         $this->name = '';
@@ -26,7 +31,7 @@ class LoginRegister extends Component
         $this->telefono = '';
     }
 
-    public function login(): void
+    public function login()
     {
         $validatedData = $this->validate([
             'email' => 'required|email',
@@ -38,6 +43,11 @@ class LoginRegister extends Component
         } else {
             session()->flash('error', 'Login failed');
         }
+    }
+    public function logout()
+    {
+        Auth::logout();
+        return redirect()->route('login-register'); // O redirige a donde desees después del cierre de sesión
     }
 
     public function register()
