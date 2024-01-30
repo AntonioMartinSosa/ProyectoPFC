@@ -4,6 +4,9 @@
             @if (session()->has('message'))
                 <div class="alert alert-success">
                     {{ session('message') }}
+                    @php
+                        return redirect()->route('formulario');
+                    @endphp
                 </div>
             @endif
             @if(session()->has('error'))
@@ -83,7 +86,7 @@
             </div>
 
             <div class="text-center">
-                <button type="button" class="btn btn-success btn-block" wire:click.prevent="redirectToFormulario">Iniciar Sesión</button>
+                <button type="button" class="btn btn-success btn-block" wire:click.prevent="login">Iniciar Sesión</button>
             </div>
 
             <div class="text-center mt-3">

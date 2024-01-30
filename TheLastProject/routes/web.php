@@ -25,7 +25,7 @@ Route::get('/index', function () {
     return view('index');
 });
 
-Route::get('/formulario', [FormularioController::class, 'index']);
+Route::get('/formulario', [FormularioController::class, 'index'])->name('formulario');
 Route::post('/generar-pagina', [FormularioController::class, 'generarPagina']);
 
 Route::post('/guardar-mensaje', [IndexController::class, 'guardarMensaje']);
@@ -33,10 +33,5 @@ Route::post('/guardar-mensaje', [IndexController::class, 'guardarMensaje']);
 Route::view('login', 'livewire.home');
 
 
-Route::middleware(['auth'])->group(function () {
-    // Rutas protegidas, solo accesibles para usuarios autenticados
-    // Agrega más rutas según tus necesidades
-    Route::get('edit', 'livewire.edit-porfile')->middleware('auth');
 
-});
 
