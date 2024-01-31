@@ -52,7 +52,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($productos_formateados as $producto)
+                @foreach($productos as $producto)
                 <tr>
                     <td>{{ $producto }}</td>
                 </tr>
@@ -60,9 +60,8 @@
             </tbody>
         </table>
 
-        @if($logo)
-            <img class="logo" src="{{ asset('storage/'.$logo->store('logos', 'public')) }}" alt="Logo">
-        @endif
+        <img src="{{ asset('storage/' . $logo) }}" alt="Logo de la Página Web">
+
     </div>
 
 </body>
