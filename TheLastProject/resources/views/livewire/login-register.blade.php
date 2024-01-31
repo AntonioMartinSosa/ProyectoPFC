@@ -4,7 +4,7 @@
             @if (session()->has('message'))
                 <div class="alert alert-success">
                     @php
-                        return redirect()->route('formulario');
+                        return redirect()->route('indexAuth');
                     @endphp
                 </div>
             @endif

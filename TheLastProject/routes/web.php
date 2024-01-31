@@ -35,3 +35,10 @@ Route::view('login', 'livewire.home');
 
 
 
+Route::get('/indexAuth', [LoginRegister::class, 'renderLogin'])->name('indexAuth');
+Route::get('/edit-profile', [LoginRegister::class, 'editarPerfil'])->name('editarPerfil');
+
+
+
+
+
