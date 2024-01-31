@@ -21,28 +21,25 @@ class FormularioController extends Controller
             'productos' => 'required|string',
         ]);
 
-        // Crear una instancia del modelo Web y asignar los valores
-        $web = new webs();
-        $web->client_id = auth()->user()->id;
-        $web->color_principal = $request->input('colorPrincipal');
-        $web->color_secundario = $request->input('colorSecundario');
-        $web->productos = $request->input('productos');
-
-        // Guardar el logo si se proporcionó
-        if ($request->hasFile('logo')) {
-            $logoPath = $request->file('logo')->store('logos', 'public');
-            $web->logo_path = $logoPath;
-        }
-
-        $web->save(); // Guardar en la base de datos
-
+        $id = auth()->user()->id;
         $colorPrincipal = $request->input('colorPrincipal');
         $colorSecundario = $request->input('colorSecundario');
-        $logo = $request->file('logo');
         $productos = $request->input('productos');
-        $productos_formateados = explode(", ", $productos);
+        $logo = $request->file('logo')->store('logos', 'public');
+
+
+        // Crear una instancia del modelo Web y asignar los valores
+        $web = new webs();
+        $web->client_id=$id;
+        $web->color_principal = $colorPrincipal;
+        $web->color_secundario = $colorSecundario;
+        $web->productos = $productos;
+        $web->logo_path = $logo;
+        $web->save(); // Guardar en la base de datos
+
+        $productos = explode(", ", $productos);
 
         return view('pagina_web',
-            compact('colorPrincipal', 'colorSecundario', 'logo', 'productos_formateados'));
+            compact('colorPrincipal', 'colorSecundario', 'logo', 'productos'));
     }
 }
