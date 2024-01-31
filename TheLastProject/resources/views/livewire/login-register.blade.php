@@ -3,7 +3,6 @@
         <div class="col-md-6">
             @if (session()->has('message'))
                 <div class="alert alert-success">
-                    {{ session('message') }}
                     @php
                         return redirect()->route('formulario');
                     @endphp
