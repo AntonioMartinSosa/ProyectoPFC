@@ -49,10 +49,35 @@ class LoginRegister extends Component
     }
     public function logout()
     {
-        Session::forget('email');
-        Auth::logout();
-        return redirect()->route('index'); // O redirige a donde desees después del cierre de sesión
+        // Agrega mensajes de depuración
+        \Log::info('Antes de Auth::check()');
+        \Log::info(Auth::check());
+
+        if (Auth::check()) {
+            Auth::logout();
+            Session::forget('email');
+            session()->flash('message', 'Logout successful');
+        }
+
+        // Agrega un mensaje de depuración después del logout
+        \Log::info('Después de Auth::check()');
+
+        return redirect()->route('index');
     }
+
+    public function cerrarSesion()
+    {
+        if (auth()->check()) {
+            auth()->logout();
+            Session::forget('email');
+            session()->flash('message', 'Logout successful');
+            $this->emit('cerrarSesion'); // Emitting a Livewire event
+        }
+
+        return redirect()->route('index');
+    }
+
+
 
     public function register()
     {
@@ -104,4 +129,6 @@ class LoginRegister extends Component
         // Renderizar la vista con el nombre de usuario
         return view('livewire.edit-porfile', ['email' => $email]);
     }
+
+
 }

@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+@if (auth()->check())
+
+        <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -11,15 +13,19 @@
             font-family: Arial, sans-serif;
             margin: 20px;
         }
+
         h2 {
             color: #4CAF50;
         }
+
         label {
             margin-bottom: 5px;
         }
+
         input, select, textarea {
             margin-bottom: 10px;
         }
+
         button {
             background-color: #4CAF50;
             color: white;
@@ -61,10 +67,15 @@
         </div>
     </div>
 </div>
-
 <!-- Agregamos Bootstrap JS y Popper.js para funcionalidad opcional -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
+@else
+    <script>
+        window.location = "/login";
+    </script>
+@endif
+

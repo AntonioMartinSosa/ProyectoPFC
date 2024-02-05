@@ -1,9 +1,9 @@
-@if($email)
-<!DOCTYPE html>
+@if (auth()->check())
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>account setting or edit profile - Bootdey.com</title>
+    <title>Editar Perfil</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style type="text/css">
@@ -98,9 +98,8 @@
                             </h6>
                         </div>
                         <div class="about">
-                            <h5>About</h5>
-                            <p>I'm Yuki. Full Stack Designer I enjoy creating user-centric, delightful and human
-                                experiences.</p>
+                            <h5>Sobre ti.</h5>
+                            <p>Este es el perfil con la cuenta que has creado una cuenta.</p>
                         </div>
                     </div>
                 </div>
@@ -111,12 +110,12 @@
                 <div class="card-body">
                     <div class="row gutters">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                            <h6 class="mb-2 text-primary">Personal Details</h6>
+                            <h6 class="mb-2 text-primary">Datos Personales</h6>
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                             <div class="form-group">
-                                <label for="fullName">Full Name</label>
-                                <input type="text" class="form-control" id="fullName" placeholder="Enter full name">
+                                <label for="fullName">Nombre</label>
+                                <input type="text" class="form-control" id="fullName" placeholder="Introduce tu nombre">
                             </div>
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
@@ -127,14 +126,15 @@
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                             <div class="form-group">
-                                <label for="phone">Phone</label>
+                                <label for="phone">Numero de telefono</label>
                                 <input type="text" class="form-control" id="phone" placeholder="Enter phone number">
                             </div>
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                             <div class="form-group">
                                 <label for="nombreEmpresa">Nombre de la empresa</label>
-                                <input type="text" class="form-control" id="nombreEmpresa" placeholder="Nombre de la empresa">
+                                <input type="text" class="form-control" id="nombreEmpresa"
+                                       placeholder="Nombre de la empresa">
                             </div>
                         </div>
                     </div>
@@ -153,16 +153,24 @@
     </div>
 </div>
 
-    <p>Bienvenido, {{ $email }}!</p>
-    <button wire:click="logout">Cerrar sesión</button>
-
-@else
-    <input wire:model="username" type="text" placeholder="Nombre de usuario">
-    <button wire:click="login">Iniciar sesión</button>
-@endif
+<p>Bienvenido, {{ $email }}!</p>
+<button type="button" class="btn btn-success btn-block" wire:click.prevent="cerrarSesion">Cerrar Sesion</button>
 <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Listen for the 'cerrarSesion' event
+    window.Livewire.on('cerrarSesion', () => {
+        // Any additional JavaScript logic after closing the session
+        console.log('Sesión cerrada exitosamente');
+    });
+</script>
 </body>
 </html>
+@else
+    <script>
+        window.location = "/login";
+    </script>
+@endif
+
 
 

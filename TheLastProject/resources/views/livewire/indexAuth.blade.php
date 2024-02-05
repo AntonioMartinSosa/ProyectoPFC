@@ -1,5 +1,5 @@
 @if (auth()->check())
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -7,17 +7,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 
-    <meta name="description" content="Pagina Web WebMy" />
+    <meta name="description" content="Pagina Web WebMy"/>
     <meta name="google" content="nositelinkssearchbox">
     <meta name="authors" content="@AbrahamRajoRodriguez, @AntonioMartinSosa"/>
     <title>Las mejores paginas web | WebMy</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+          integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
     <script src="{{ asset('js/index.js') }}" defer></script>
     <link rel="icon" href="{{ asset('images/logo/favicon.ico') }}">
 
@@ -53,7 +61,7 @@
                     <a class="nav-link js-scroll-trigger" href="#contact">Contactanos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="/login">TU PAGINA WEB</a>
+                    <a class="nav-link js-scroll-trigger" href="/formulario">TU PAGINA WEB</a>
                 </li>
             </ul>
         </div>
@@ -62,7 +70,8 @@
 <header class="background-main">
     <main class="main">
         <h1 class="main-title" id="page-top">Web is
-            <a href="" class="typewrite" data-period="3000" data-type='[ "Creative", "Future", "Enterteinment", "Freedom" ]'>
+            <a href="" class="typewrite" data-period="3000"
+               data-type='[ "Creative", "Future", "Enterteinment", "Freedom" ]'>
                 <span class="wrap"></span>
             </a>
         </h1>
@@ -81,7 +90,8 @@
             <h2>¿Quienes somos?</h2>
             <div class="line-shape"></div>
             <p>
-                Somos expertos en la creación de páginas web impactantes y sistemas de gestión empresarial personalizados.
+                Somos expertos en la creación de páginas web impactantes y sistemas de gestión empresarial
+                personalizados.
                 Nos dedicamos a impulsar el éxito empresarial a través de soluciones digitales y Nos apasiona colaborar
                 estrechamente con nuestros clientes para transformar sus ideas en resultados tangibles.
                 Con un equipo altamente capacitado, estamos aquí para simplificar y potenciar tu presencia
@@ -113,7 +123,8 @@
                 <div class="service-box mt-5 mx-auto">
                     <i class="fas fa-4x fa-paper-plane text-primary mb-3 sr-icon-2"></i>
                     <h3 class="mb-3">Gestion Empresarial</h3>
-                    <p class="text-muted mb-0">Creamos tu sistema de gestion empresarial para la administracion de la empresa</p>
+                    <p class="text-muted mb-0">Creamos tu sistema de gestion empresarial para la administracion de la
+                        empresa</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 text-center">
@@ -127,7 +138,8 @@
                 <div class="service-box mt-5 mx-auto">
                     <i class="fas fa-4x fa-heart text-primary mb-3 sr-icon-4"></i>
                     <h3 class="mb-3">Profesionalidad</h3>
-                    <p class="text-muted mb-0">Siempre estaremos a disposicion del cliente bajo cualquier duda o consulta</p>
+                    <p class="text-muted mb-0">Siempre estaremos a disposicion del cliente bajo cualquier duda o
+                        consulta</p>
                 </div>
             </div>
         </div>
@@ -221,19 +233,23 @@
                 <div class="col-md-12 form-line">
                     <div class="form-group">
                         <label for="exampleInputUsername">Nombre</label>
-                        <input type="text" class="form-control" name="nombre" id="exampleInputUsername" placeholder="Introduce tu nombre">
+                        <input type="text" class="form-control" name="nombre" id="exampleInputUsername"
+                               placeholder="Introduce tu nombre">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail">Email</label>
-                        <input type="email" class="form-control" name="email" id="exampleInputEmail" placeholder="Introduce tu email">
+                        <input type="email" class="form-control" name="email" id="exampleInputEmail"
+                               placeholder="Introduce tu email">
                     </div>
                     <div class="form-group">
                         <label for="telephone">Número telefono</label>
-                        <input type="tel" class="form-control" name="telefono" id="telephone" placeholder="Introduce tu número de telefono">
+                        <input type="tel" class="form-control" name="telefono" id="telephone"
+                               placeholder="Introduce tu número de telefono">
                     </div>
                     <div class="form-group">
                         <label for="description">Mensaje</label>
-                        <textarea class="form-control" name="mensaje" id="description" placeholder="Introduce tu mensaje"></textarea>
+                        <textarea class="form-control" name="mensaje" id="description"
+                                  placeholder="Introduce tu mensaje"></textarea>
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary submit">
@@ -251,7 +267,8 @@
     <div class="container">
         <ul class="list-inline mb-5">
             <li class="list-inline-item">
-                <a class="social-link rounded-circle text-white" href="https://github.com/AntonioMartinSosa/ProyectoPFC">
+                <a class="social-link rounded-circle text-white"
+                   href="https://github.com/AntonioMartinSosa/ProyectoPFC">
                     <i class="fab fa-github"></i>
                 </a>
             </li>
@@ -262,15 +279,17 @@
 <br>
 <div>
 
-        <p>Bienvenido, {{ $email }}!</p>
-        <button onclick="window.location='{{ route("editarPerfil") }}'">Editar perfil</button>
-        <button wire:click="logout">Cerrar sesión</button>
-    @else
-        <input wire:model="username" type="text" placeholder="Nombre de usuario">
-        <button wire:click="login">Iniciar sesión</button>
-    @endif
+    <p>Bienvenido, {{ $email }}!</p>
+    <button onclick="window.location='{{ route("editarPerfil") }}'">Editar perfil</button>
+    <a class="btn btn-primary btn-sm" wire:click="cerrar-sesion"><strong>Cerrar sesion</strong></a>
 </div>
 </body>
 </html>
+@else
+    <script>
+        window.location = "/login";
+    </script>
+@endif
+
 
 
