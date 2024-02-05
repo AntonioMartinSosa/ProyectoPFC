@@ -1,68 +1,97 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Web Generada</title>
     <style>
         body {
-            background-color: {{ $colorPrincipal }};
-            color: {{ $colorSecundario }};
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
-            box-sizing: border-box;
+            padding: 0;
+            background-color: {{ $colorPrincipal }};
+            color: {{ $colorSecundario }};
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background-color: {{ $colorSecundario }};
+            color: {{ $colorPrincipal }};
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .navbar-logo {
+            max-width: 100px;
+            margin-right: auto;
+        }
+
+        .navbar-title {
+            font-size: 24px;
+            margin-left: auto;
         }
 
         .container {
-            max-width: 800px;
-            margin: 0 auto;
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: auto;
         }
 
-        h2 {
-            color: {{ $colorSecundario }};
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 8px;
             text-align: center;
         }
 
-        p {
-            margin-bottom: 10px;
+        th {
+            background-color: {{ $colorSecundario }};
+            color: {{ $colorPrincipal }};
         }
 
-        pre {
-            white-space: pre-wrap;
-            word-wrap: break-word;
-        }
-
-        .logo {
-            display: block;
-            max-width: 200px;
-            margin: 20px auto;
+        .product-image {
+            max-width: 100px;
+            height: auto;
         }
     </style>
 </head>
+
 <body>
 
+    <div class="navbar">
+        <img src="{{ asset('storage/' . $logo) }}" alt="Logo de la Página Web" class="navbar-logo">
+        <div class="navbar-title">Página Web Generada</div>
+    </div>
+
     <div class="container">
-        <h2>Página Web Generada</h2>
 
         <table>
             <thead>
                 <tr>
-                    <th>Productos</th>
+                    <th colspan="2">Productos</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach($productos as $producto)
-                <tr>
-                    <td>{{ $producto }}</td>
-                </tr>
+                @foreach ($productos as $producto)
+                    <tr>
+                        <td>{{ $producto }}</td>
+                        <td><img src="" alt="Imagen" class="product-image"></td>
+                    </tr>
                 @endforeach
             </tbody>
         </table>
-
-        <img src="{{ asset('storage/' . $logo) }}" alt="Logo de la Página Web">
-
     </div>
 
 </body>
+
 </html>
