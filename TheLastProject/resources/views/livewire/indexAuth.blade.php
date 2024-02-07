@@ -63,6 +63,18 @@
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="/formulario">TU PAGINA WEB</a>
                 </li>
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <a href="#" class="dropbtn">Menú</a>
+                        <div class="dropdown-content">
+                            <a href="#">Bienvenido, {{ $email }}!</a>
+                            <a onclick="window.location='{{ route("editarPerfil") }}'"><strong>Editar
+                                    perfil</strong></a>
+                            <a href="{{ route("cerrarSesion") }}" wire:click="cerrarSesion"><strong>Cerrar
+                                    sesion</strong></a>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </div>
     </div>
@@ -277,12 +289,7 @@
     </div>
 </footer>
 <br>
-<div>
 
-    <p>Bienvenido, {{ $email }}!</p>
-    <button onclick="window.location='{{ route("editarPerfil") }}'">Editar perfil</button>
-    <a class="btn btn-primary btn-sm" wire:click="cerrar-sesion"><strong>Cerrar sesion</strong></a>
-</div>
 </body>
 </html>
 @else

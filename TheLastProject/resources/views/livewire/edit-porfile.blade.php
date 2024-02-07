@@ -114,36 +114,37 @@
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                             <div class="form-group">
-                                <label for="fullName">Nombre</label>
-                                <input type="text" class="form-control" id="fullName" placeholder="Introduce tu nombre">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" class="form-control" id="nombre" for="nombre" placeholder="{{Auth::user()->name}}">
                             </div>
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                             <div class="form-group">
-                                <label for="eMail">Email</label>
-                                <input type="email" class="form-control" id="eMail" placeholder="Enter email ID">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="{{Auth::user()->email}}">
                             </div>
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                             <div class="form-group">
-                                <label for="phone">Numero de telefono</label>
-                                <input type="text" class="form-control" id="phone" placeholder="Enter phone number">
+                                <label for="telefono">Numero de telefono</label>
+                                <input type="text" class="form-control" id="telefono" placeholder="{{Auth::user()->telefono}}">
                             </div>
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                             <div class="form-group">
-                                <label for="nombreEmpresa">Nombre de la empresa</label>
-                                <input type="text" class="form-control" id="nombreEmpresa"
-                                       placeholder="Nombre de la empresa">
+                                <label for="nombre_empresa">Nombre de la empresa</label>
+                                <input type="text" class="form-control" id="nombre_empresa"
+                                       placeholder="{{Auth::user()->nombre_empresa}}">
                             </div>
                         </div>
                     </div>
                     <div class="row gutters">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="text-right">
-                                <button type="button" id="submit" name="submit" class="btn btn-secondary">Cancel
-                                </button>
-                                <button type="button" id="submit" name="submit" class="btn btn-primary">Update</button>
+                                <a href="{{route('indexAuth')}}" type="button" id="submit" name="submit" class="btn btn-secondary">Cancel</a>
+                                <a href="{{ route("acutalizarUsuario") }}"  wire:click="actualizarUsuario" type="button" id="submit" name="submit" class="btn btn-primary">Actualizar Usuario</a>
+                                <a href="{{ route("cerrarSesion") }}" wire:click="cerrarSesion" type="button" id="submit" name="submit" class="btn btn-danger">Cerrar Sesión</a>
+
                             </div>
                         </div>
                     </div>
@@ -153,17 +154,9 @@
     </div>
 </div>
 
-<p>Bienvenido, {{ $email }}!</p>
-<button type="button" class="btn btn-success btn-block" wire:click.prevent="cerrarSesion">Cerrar Sesion</button>
+
 <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-    // Listen for the 'cerrarSesion' event
-    window.Livewire.on('cerrarSesion', () => {
-        // Any additional JavaScript logic after closing the session
-        console.log('Sesión cerrada exitosamente');
-    });
-</script>
 </body>
 </html>
 @else
