@@ -90,6 +90,7 @@
 
             <div class="text-center mt-3">
                 <p class="text-muted">¿No tienes cuenta?</p> <a class="btn btn-primary btn-sm" wire:click.prevent="register"><strong>Regístrate</strong></a>
+                <a href="{{route('index')}}" class="btn btn-primary btn-sm" ><strong>Volver al Inicio</strong></a>
             </div>
         </form>
     @endif

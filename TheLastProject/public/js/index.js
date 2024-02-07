@@ -1,4 +1,5 @@
-;
+import Livewire from "./app";
+
 $(function(){
     $('a[href*=#]').click(function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
@@ -68,3 +69,5 @@ window.onload = function() {
     css.type = "text/css";
     document.body.appendChild(css);
 }
+
+

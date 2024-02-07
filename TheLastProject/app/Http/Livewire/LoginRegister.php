@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Session;
 class LoginRegister extends Component
 {
     public $email, $password, $name, $nombre_empresa, $telefono;
-    public $registerForm =  false;
+    public $registerForm = false;
 
     public function render()
     {
@@ -33,7 +33,7 @@ class LoginRegister extends Component
         $this->telefono = '';
     }
 
-    public function login():void
+    public function login(): void
     {
         $validatedData = $this->validate([
             'email' => 'required|email',
@@ -47,11 +47,10 @@ class LoginRegister extends Component
             session()->flash('error', 'Login failed');
         }
     }
+
     public function logout()
     {
-        // Agrega mensajes de depuración
-        \Log::info('Antes de Auth::check()');
-        \Log::info(Auth::check());
+
 
         if (Auth::check()) {
             Auth::logout();
@@ -59,24 +58,44 @@ class LoginRegister extends Component
             session()->flash('message', 'Logout successful');
         }
 
-        // Agrega un mensaje de depuración después del logout
-        \Log::info('Después de Auth::check()');
 
-        return redirect()->route('index');
+
+    }
+
+    public function acutalizarUsuario()
+    {
+        $validatedData = $this->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'nombre_empresa' => 'required',
+            'telefono' => 'required',
+        ]);
+
+        // Obtener el usuario autenticado
+        $cliente = Auth::user();
+
+        // Actualizar los campos
+        $cliente->update([
+            'name' => $this->name,
+            'email' => $this->email,
+            'nombre_empresa' => $this->nombre_empresa,
+            'telefono' => $this->telefono,
+        ]);
+
+        session()->flash('message', 'Información de usuario actualizada correctamente.');
     }
 
     public function cerrarSesion()
     {
-        if (auth()->check()) {
-            auth()->logout();
-            Session::forget('email');
-            session()->flash('message', 'Logout successful');
-            $this->emit('cerrarSesion'); // Emitting a Livewire event
-        }
+        auth()->logout();
+        Session::forget('email');
+        session()->flash('message', 'Logout successful');
+        $this->emit('cerrarSesion'); // Emitting a Livewire event
 
-        return redirect()->route('index');
+
+        return view('index');
+
     }
-
 
 
     public function register()
@@ -121,6 +140,7 @@ class LoginRegister extends Component
         // Renderizar la vista con el nombre de usuario
         return view('livewire.indexAuth', ['email' => $email]);
     }
+
     public function editarPerfil()
     {
         // Obtener el nombre de usuario desde la sesión

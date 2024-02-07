@@ -23,7 +23,8 @@ Route::get('/', function () {
 
 Route::get('/index', function () {
     return view('index');
-});
+})->name('index');
+
 
 Route::get('/formulario', [FormularioController::class, 'index'])->name('formulario');
 Route::post('/generar-pagina', [FormularioController::class, 'generarPagina']);
@@ -40,5 +41,7 @@ Route::get('/indexAuth', [LoginRegister::class, 'renderLogin'])->name('indexAuth
 Route::get('/edit-profile', [LoginRegister::class, 'editarPerfil'])->name('editarPerfil');
 
 
-Route::post('/cerrar-sesion', [LoginRegister::class, 'cerrarSesion'])->name('cerrar-sesion');
+Route::get('/cerrarSesion', [LoginRegister::class, 'cerrarSesion'])->name('cerrarSesion');
+
+Route::get('/acutalizarUsuario', [LoginRegister::class, 'acutalizarUsuario'])->name('acutalizarUsuario');
 
