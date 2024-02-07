@@ -6,7 +6,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario para Página Web</title>
-    <!-- Agregamos Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
         body {
@@ -59,7 +58,13 @@
 
                 <div class="form-group">
                     <label for="productos">Productos que va a vender:</label>
-                    <textarea id="productos" name="productos" rows="4" class="form-control" required></textarea>
+                    <div id="productosContainer">
+                        <div class="producto">
+                            <input type="text" name="nombresProductos[]" placeholder="Nombre del Producto" required>
+                            <input type="file" name="fotosProductos[]" accept="image/*" required>
+                        </div>
+                    </div>
+                    <button type="button" id="agregarProducto" class="btn btn-secondary">Agregar Producto</button>
                 </div>
 
                 <button type="submit" class="btn btn-primary btn-block">Generar Página Web</button>
@@ -67,12 +72,23 @@
         </div>
     </div>
 </div>
-<!-- Agregamos Bootstrap JS y Popper.js para funcionalidad opcional -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
+<script>
+    document.getElementById('agregarProducto').addEventListener('click', function() {
+        var container = document.getElementById('productosContainer');
+        var productoDiv = document.createElement('div');
+        productoDiv.classList.add('producto');
+        productoDiv.innerHTML = `
+            <input type="text" name="nombresProductos[]" placeholder="Nombre del Producto" required>
+            <input type="file" name="fotosProductos[]" accept="image/*" required>
+        `;
+        container.appendChild(productoDiv);
+    });
+</script>
 @else
     <script>
         window.location = "/login";

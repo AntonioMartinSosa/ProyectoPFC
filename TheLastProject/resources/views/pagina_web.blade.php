@@ -84,8 +84,8 @@
             <tbody>
                 @foreach ($productos as $producto)
                     <tr>
-                        <td>{{ $producto }}</td>
-                        <td><img src="" alt="Imagen" class="product-image"></td>
+                        <td>{{ $producto['nombre'] }}</td>
+                        <td><img src="{{ asset('storage/' . $producto['foto']) }}" alt="Imagen" class="product-image"></td>
                     </tr>
                 @endforeach
             </tbody>

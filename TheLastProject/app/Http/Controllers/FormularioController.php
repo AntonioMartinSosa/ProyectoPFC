@@ -14,32 +14,36 @@ class FormularioController extends Controller
 
     public function generarPagina(Request $request)
     {
-        $request->validate([
-            'colorPrincipal' => 'required|string',
-            'colorSecundario' => 'required|string',
-            'logo' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048', // Puedes ajustar según tus necesidades
-            'productos' => 'required|string',
+        $validatedData = $request->validate([
+            'colorPrincipal' => 'required',
+            'colorSecundario' => 'required',
+            'logo' => 'required|image',
+            'nombresProductos.*' => 'required',
+            'fotosProductos.*' => 'required|image',
         ]);
 
         $id = auth()->user()->id;
         $colorPrincipal = $request->input('colorPrincipal');
         $colorSecundario = $request->input('colorSecundario');
-        $productos = $request->input('productos');
         $logo = $request->file('logo')->store('logos', 'public');
+        $productos = [];
+        foreach ($request->nombresProductos as $key => $nombreProducto) {
+            $fotoProductoPath = $request->file('fotosProductos')[$key]->store('productos', 'public');
+            $productos[] = [
+                'nombre' => $nombreProducto,
+                'foto' => $fotoProductoPath,
+            ];
+        }
 
-
-        // Crear una instancia del modelo Web y asignar los valores
+        $nombreProductos = implode(', ', array_column($productos, 'nombre'));
         $web = new webs();
-        $web->client_id=$id;
+        $web->client_id = $id;
         $web->color_principal = $colorPrincipal;
         $web->color_secundario = $colorSecundario;
-        $web->productos = $productos;
+        $web->productos = $nombreProductos;
         $web->logo_path = $logo;
-        $web->save(); // Guardar en la base de datos
+        $web->save();
 
-        $productos = explode(", ", $productos);
-
-        return view('pagina_web',
-            compact('colorPrincipal', 'colorSecundario', 'logo', 'productos'));
+        return view('pagina_web', compact('colorPrincipal', 'colorSecundario', 'logo', 'productos'));
     }
 }
