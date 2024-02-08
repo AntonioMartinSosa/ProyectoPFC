@@ -1,4 +1,3 @@
-import Livewire from "./app";
 
 $(function(){
     $('a[href*=#]').click(function() {
