@@ -10,4 +10,130 @@
     <option name="highlightLevel" value="WARNING" />
     <option name="transferred" value="true" />
   </component>
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/graham-campbell/result-type" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/dragonmantank/cron-expression" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/nunomaduro/collision" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/tijsverkoyen/css-to-inline-styles" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/sebastian/code-unit" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/carbonphp/carbon-doctrine-types" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/livewire/livewire" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/fruitcake/laravel-cors" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/fakerphp/faker" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/laravel/serializable-closure" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/laravel/sanctum" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/laravel/tinker" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/dflydev/dot-access-data" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/laravel/sail" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/laravel/framework" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/ramsey/collection" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/league/config" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/league/commonmark" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/league/mime-type-detection" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/league/flysystem" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/facade/flare-client-php" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/facade/ignition-contracts" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/facade/ignition" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/brick/math" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/asm89/stack-cors" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/nette/utils" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/nette/schema" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/filp/whoops" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/voku/portable-ascii" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/opis/closure" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/psr/clock" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/TheLastProject/vendor/composer" />
+    </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />
+  <component name="PhpStanOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings configuration_file_path="$PROJECT_DIR$/TheLastProject/phpunit.xml" custom_loader_path="$PROJECT_DIR$/TheLastProject/vendor/autoload.php" use_configuration_file="true" />
+    </phpunit_settings>
+  </component>
+  <component name="PsalmOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
 </project>

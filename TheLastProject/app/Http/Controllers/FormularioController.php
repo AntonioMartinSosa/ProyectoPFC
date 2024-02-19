@@ -12,6 +12,8 @@ class FormularioController extends Controller
         return view('formulario');
     }
 
+
+
     public function generarPagina(Request $request)
     {
         $validatedData = $request->validate([
@@ -35,6 +37,7 @@ class FormularioController extends Controller
                 'foto' => $fotoProductoPath,
             ];
         }
+
 
         $nombreProductos = implode(', ', array_column($productos, 'nombre'));
         $web = new webs();
