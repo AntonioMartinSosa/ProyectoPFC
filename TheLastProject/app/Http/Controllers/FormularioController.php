@@ -23,6 +23,7 @@ class FormularioController extends Controller
         ]);
 
         $id = auth()->user()->id;
+        $empresa = auth()->user()->nombre_empresa;
         $colorPrincipal = $request->input('colorPrincipal');
         $colorSecundario = $request->input('colorSecundario');
         $logo = $request->file('logo')->store('logos', 'public');
@@ -44,6 +45,6 @@ class FormularioController extends Controller
         $web->logo_path = $logo;
         $web->save();
 
-        return view('pagina_web', compact('colorPrincipal', 'colorSecundario', 'logo', 'productos'));
+        return view('pagina_web', compact('empresa', 'colorPrincipal', 'colorSecundario', 'logo', 'productos'));
     }
 }

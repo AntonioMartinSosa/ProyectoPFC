@@ -63,6 +63,9 @@
             max-width: 100px;
             height: auto;
         }
+        .mayusculas {
+            text-transform: uppercase;
+        }
     </style>
 </head>
 
@@ -70,7 +73,7 @@
 
     <div class="navbar">
         <img src="{{ asset('storage/' . $logo) }}" alt="Logo de la Página Web" class="navbar-logo">
-        <div class="navbar-title">Página Web Generada</div>
+        <div class="navbar-title mayusculas">{{ $empresa }}</div>
     </div>
 
     <div class="container">
@@ -85,7 +88,8 @@
                 @foreach ($productos as $producto)
                     <tr>
                         <td>{{ $producto['nombre'] }}</td>
-                        <td><img src="{{ asset('storage/' . $producto['foto']) }}" alt="Imagen" class="product-image"></td>
+                        <td><img src="{{ asset('storage/' . $producto['foto']) }}" alt="Imagen" class="product-image">
+                        </td>
                     </tr>
                 @endforeach
             </tbody>

@@ -50,7 +50,6 @@
                     <label for="colorSecundario">Color Secundario:</label>
                     <input type="color" id="colorSecundario" name="colorSecundario" class="form-control" required>
                 </div>
-
                 <div class="form-group">
                     <label for="logo">Logo de la Página Web:</label>
                     <input type="file" id="logo" name="logo" class="form-control-file" accept="image/*" required>

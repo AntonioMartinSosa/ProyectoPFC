@@ -61,14 +61,12 @@
                     <a class="nav-link js-scroll-trigger" href="#contact">Contactanos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="/formulario">TU PAGINA WEB</a>
-                </li>
-                <li class="nav-item">
                     <div class="dropdown">
-                        <a href="#" class="dropbtn">Menú</a>
+                        <a href="#" class="dropbtn nav-link js-scroll-trigger">Menú</a>
                         <div class="dropdown-content">
-                            <a href="#">Bienvenido, {{ $email }}!</a>
-                            <a onclick="window.location='{{ route("editarPerfil") }}'"><strong>Editar
+                            <a href="#"><strong> Bienvenido, {{ $email }}!</strong></a>
+                            <a href="/formulario"><strong> Tu Pagina Web</strong></a>
+                            <a href="#" onclick="window.location='{{ route("editarPerfil") }}'"><strong>Editar
                                     perfil</strong></a>
                             <a href="{{ route("cerrarSesion") }}" wire:click="cerrarSesion"><strong>Cerrar
                                     sesion</strong></a>
@@ -82,7 +80,7 @@
 <header class="background-main">
     <main class="main">
         <h1 class="main-title" id="page-top">Web is
-            <a href="" class="typewrite" data-period="3000"
+            <a href="#" class="typewrite" data-period="3000"
                data-type='[ "Creative", "Future", "Enterteinment", "Freedom" ]'>
                 <span class="wrap"></span>
             </a>
