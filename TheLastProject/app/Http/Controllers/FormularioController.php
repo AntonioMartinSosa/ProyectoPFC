@@ -32,9 +32,13 @@ class FormularioController extends Controller
         $productos = [];
         foreach ($request->nombresProductos as $key => $nombreProducto) {
             $fotoProductoPath = $request->file('fotosProductos')[$key]->store('productos', 'public');
+            $descripcionProducto = $request->descripcionProductos[$key];
+            $precioProducto = $request->precioProductos[$key];
             $productos[] = [
                 'nombre' => $nombreProducto,
                 'foto' => $fotoProductoPath,
+                'descripcion' => $descripcionProducto,
+                'precio' => $precioProducto
             ];
         }
 

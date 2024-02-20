@@ -61,6 +61,8 @@
                         <div class="producto">
                             <input type="text" name="nombresProductos[]" placeholder="Nombre del Producto" required>
                             <input type="file" name="fotosProductos[]" accept="image/*" required>
+                            <input type="text" name="descripcionProductos[]" placeholder="Descripcion del Producto" required>
+                            <input type="text" name="precioProductos[]" placeholder="Precio del Producto" required>
                         </div>
                     </div>
                     <button type="button" id="agregarProducto" class="btn btn-secondary">Agregar Producto</button>
@@ -84,6 +86,8 @@
         productoDiv.innerHTML = `
             <input type="text" name="nombresProductos[]" placeholder="Nombre del Producto" required>
             <input type="file" name="fotosProductos[]" accept="image/*" required>
+            <input type="text" name="descripcionProductos[]" placeholder="Descripcion del Producto" required>
+            <input type="text" name="precioProductos[]" placeholder="Precio del Producto" required>
         `;
         container.appendChild(productoDiv);
     });
