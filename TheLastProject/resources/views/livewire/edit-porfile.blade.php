@@ -77,8 +77,6 @@
             border: 0;
             margin-bottom: 1rem;
         }
-
-
     </style>
 </head>
 <body>
@@ -99,7 +97,7 @@
                         </div>
                         <div class="about">
                             <h5>Sobre ti.</h5>
-                            <p>Este es el perfil con la cuenta que has creado una cuenta.</p>
+                            <p>Este es el perfil con la cuenta que has creado.</p>
                         </div>
                     </div>
                 </div>
@@ -108,53 +106,52 @@
         <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
             <div class="card h-100">
                 <div class="card-body">
-                    <div class="row gutters">
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                            <h6 class="mb-2 text-primary">Datos Personales</h6>
-                        </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                            <div class="form-group">
-                                <label for="nombre">Nombre</label>
-                                <input type="text" class="form-control" id="nombre" for="nombre" placeholder="{{Auth::user()->name}}">
+                    <form method="POST" action="{{ route('actualizarUsuario') }}">
+                        @csrf
+                        <div class="row gutters">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <h6 class="mb-2 text-primary">Datos Personales</h6>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="name">Nombre</label>
+                                    <input type="text" class="form-control" wire:model="name" id="name" name="name" value="{{Auth::user()->name}}">
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" class="form-control" wire:model="email" id="email" name="email" value="{{Auth::user()->email}}">
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="telefono">Numero de telefono</label>
+                                    <input type="text" class="form-control" wire:model="telefono" id="telefono" name="telefono" value="{{Auth::user()->telefono}}">
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="nombre_empresa">Nombre de la empresa</label>
+                                    <input type="text" class="form-control" wire:model="nombre_empresa" id="nombre_empresa" name="nombre_empresa" value="{{Auth::user()->nombre_empresa}}">
+                                </div>
                             </div>
                         </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="{{Auth::user()->email}}">
+                        <div class="row gutters">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div class="text-right">
+                                    <button type="submit" class="btn btn-primary">Actualizar Usuario</button>
+                                    <a href="{{ route('indexAuth') }}" class="btn btn-secondary">Cancelar</a>
+                                    <a href="{{ route('cerrarSesion') }}" class="btn btn-danger">Cerrar Sesión</a>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                            <div class="form-group">
-                                <label for="telefono">Numero de telefono</label>
-                                <input type="text" class="form-control" id="telefono" placeholder="{{Auth::user()->telefono}}">
-                            </div>
-                        </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                            <div class="form-group">
-                                <label for="nombre_empresa">Nombre de la empresa</label>
-                                <input type="text" class="form-control" id="nombre_empresa"
-                                       placeholder="{{Auth::user()->nombre_empresa}}">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row gutters">
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                            <div class="text-right">
-                                <a href="{{route('indexAuth')}}" type="button" id="submit" name="submit" class="btn btn-secondary">Cancel</a>
-                                <a href="{{ route("acutalizarUsuario") }}"  wire:click="actualizarUsuario" type="button" id="submit" name="submit" class="btn btn-primary">Actualizar Usuario</a>
-                                <a href="{{ route("cerrarSesion") }}" wire:click="cerrarSesion" type="button" id="submit" name="submit" class="btn btn-danger">Cerrar Sesión</a>
-
-                            </div>
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-
 <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
@@ -164,6 +161,3 @@
         window.location = "/login";
     </script>
 @endif
-
-
-

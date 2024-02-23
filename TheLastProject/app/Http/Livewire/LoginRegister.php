@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\Clientes;
+use Illuminate\Http\Request;
 use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -50,40 +51,53 @@ class LoginRegister extends Component
 
     public function logout()
     {
-
-
         if (Auth::check()) {
             Auth::logout();
             Session::forget('email');
             session()->flash('message', 'Logout successful');
         }
-
-
-
     }
 
-    public function acutalizarUsuario()
+    public function actualizarUsuario(Request $request)
     {
-        $validatedData = $this->validate([
-            'name' => 'required',
+        // Validación de los datos del formulario
+        $validatedData = $request->validate([
+            'name' => 'sometimes|required',
             'email' => 'required|email',
             'nombre_empresa' => 'required',
             'telefono' => 'required',
         ]);
 
-        // Obtener el usuario autenticado
         $cliente = Auth::user();
 
-        // Actualizar los campos
-        $cliente->update([
-            'name' => $this->name,
-            'email' => $this->email,
-            'nombre_empresa' => $this->nombre_empresa,
-            'telefono' => $this->telefono,
-        ]);
+        // Actualizar los campos del cliente si están presentes en la solicitud
+        if ($request->input('name')) {
+            $cliente->name = $request->input('name');
+        }
+        if ($request->input('email')) {
+            $cliente->email = $request->input('email');
+        }
+        if ($request->input('nombre_empresa')) {
+            $cliente->nombre_empresa = $request->input('nombre_empresa');
+        }
+        if ($request->input('telefono')) {
+            $cliente->telefono = $request->input('telefono');
+        }
 
+        // Guardar los cambios en la base de datos
+        $cliente->save();
+
+        // Mensaje flash para informar al usuario sobre el éxito de la actualización
         session()->flash('message', 'Información de usuario actualizada correctamente.');
+        return back();
+
     }
+
+
+
+
+
+
 
     public function cerrarSesion()
     {

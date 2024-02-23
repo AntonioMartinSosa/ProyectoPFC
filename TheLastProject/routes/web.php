@@ -43,5 +43,5 @@ Route::get('/edit-profile', [LoginRegister::class, 'editarPerfil'])->name('edita
 
 Route::get('/cerrarSesion', [LoginRegister::class, 'cerrarSesion'])->name('cerrarSesion');
 
-Route::get('/acutalizarUsuario', [LoginRegister::class, 'acutalizarUsuario'])->name('acutalizarUsuario');
+Route::post('/actualizarUsuario', [LoginRegister::class, 'actualizarUsuario'])->name('actualizarUsuario');
 
