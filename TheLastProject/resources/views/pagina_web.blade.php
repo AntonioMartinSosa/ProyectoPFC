@@ -11,8 +11,8 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
+            background-color: {{ $colorPrincipal }};
+            color: {{ $colorSecundario }};
             line-height: 1.6;
             display: flex;
             flex-direction: column;
@@ -21,8 +21,8 @@
         }
 
         header {
-            background-color: #1a1a1a;
-            color: #ffffff;
+            background-color: {{ $colorSecundario }};
+            color: {{ $colorPrincipal }};
             padding: 1.5rem 2rem;
             display: flex;
             justify-content: space-between;
@@ -33,11 +33,11 @@
         }
 
         header img {
-            max-width: 150px; /* Aumentado el tamaño de la imagen */
+            max-width: 150px;
         }
 
         header h1 {
-            font-size: 2rem; /* Ajustado el tamaño del título */
+            font-size: 2rem;
             margin-left: 1rem;
             font-weight: 700;
         }
@@ -48,6 +48,7 @@
             justify-content: center;
             align-items: center;
             padding: 2rem;
+            color: {{ $colorSecundario }}
         }
 
         section {
@@ -67,7 +68,7 @@
             font-size: 3.5rem;
             font-weight: 700;
             margin-bottom: 2rem;
-            color: #333;
+            color: {{ $colorPrincipal }};
         }
 
         .product {
@@ -136,8 +137,8 @@
         }
 
         footer {
-            background-color: #1a1a1a;
-            color: #ffffff;
+            background-color: {{ $colorSecundario }};
+            color: {{ $colorPrincipal }};
             padding: 1rem;
             text-align: center;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
