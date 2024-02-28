@@ -112,6 +112,3 @@ Lista de problemas conocidos o desafíos actuales en el proyecto.
 
 9. **Feedback Continuo de los Usuarios:**
     - Establecer un sistema de retroalimentación para recopilar comentarios de los usuarios y utilizarlos para realizar mejoras continuas.
-
-## Agradecimientos
-Agradecimientos a contribuyentes, fuentes de inspiración o recursos externos.
