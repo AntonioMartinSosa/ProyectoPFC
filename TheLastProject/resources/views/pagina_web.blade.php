@@ -177,8 +177,68 @@
 
 <footer>
     <p>&copy; {{ date('Y') }} {{ $empresa }} - Todos los derechos reservados.</p>
+    <button id="downloadButton">Descargar Página</button>
 </footer>
 
-</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.0/jszip.min.js"></script>
+<script>
+    document.getElementById('downloadButton').addEventListener('click', function () {
+        var button = this; // Referencia al botón de descarga
 
+        button.style.display = 'none';
+
+        var zip = new JSZip();
+
+        // Función para descargar una imagen y agregarla al archivo ZIP
+        function addImageToZip(imageUrl, zip, filename) {
+            return new Promise((resolve, reject) => {
+                // Descargar la imagen como blob
+                fetch(imageUrl)
+                    .then(response => response.blob())
+                    .then(blob => {
+                        // Agregar la imagen al archivo ZIP
+                        zip.file(filename, blob);
+                        resolve();
+                    })
+                    .catch(error => {
+                        console.error('Error al descargar la imagen:', error);
+                        reject(error);
+                    });
+            });
+        }
+
+        // Agregar el HTML de la página al archivo ZIP
+        var htmlContent = document.documentElement.outerHTML;
+        zip.file('index.html', htmlContent);
+
+        // Obtener todas las imágenes de la página
+        var images = document.querySelectorAll('img');
+        var promises = [];
+
+        // Recorrer todas las imágenes y agregarlas al archivo ZIP
+        images.forEach((image, index) => {
+            var imageUrl = image.src;
+            var filename = 'image_' + index + '.' + imageUrl.split('.').pop(); // Nombre de archivo único
+            promises.push(addImageToZip(imageUrl, zip, filename));
+        });
+
+        // Generar el archivo ZIP después de que se hayan agregado todas las imágenes
+        Promise.all(promises)
+            .then(() => {
+                zip.generateAsync({ type: "blob" })
+                    .then(function (content) {
+                        // Crear un enlace para la descarga
+                        var link = document.createElement('a');
+                        link.download = "pagina.zip";
+                        link.href = window.URL.createObjectURL(content);
+                        link.click();
+                    });
+            })
+            .catch(error => {
+                console.error('Error al agregar imágenes al ZIP:', error);
+            });
+    });
+</script>
+
+</body>
 </html>
