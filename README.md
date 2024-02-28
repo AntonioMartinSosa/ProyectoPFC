@@ -16,8 +16,7 @@ Nuestro propósito es simplificar procesos laboriosos para las empresas, mejoran
 - Bootstrap
 - Node.js
 - Mysql
-- PostgreSQL
-- Odoo
+- Docker
 
 ## Objetivos a corto plazo
 
@@ -43,22 +42,12 @@ Nuestro propósito es simplificar procesos laboriosos para las empresas, mejoran
      - Crea las vistas HTML, el controlador y las rutas en Laravel.
      - Implementa la seguridad de Laravel, especialmente para las transacciones de pago.
 
-### 4. Entender la Base de Datos PostgreSQL
-   - **Aprendizaje:**
-     - Investiga sobre PostgreSQL, su estructura y sintaxis SQL.
-     - Familiarízate con cómo interactuar con PostgreSQL desde Laravel.
-
-### 5. Crear Categorías/Secciones para Tiendas
+### 4. Crear Categorías/Secciones para Tiendas
    - **Planificación:**
      - Enumera y define las categorías o secciones que podrían aparecer en las tiendas.
      - Considera la estructura jerárquica si es necesario.
 
-### 6. Crear Base de Datos NoSQL en Odoo para Pruebas
-   - **Configuración:**
-     - Configura una base de datos NoSQL en Odoo para realizar pruebas.
-     - Comprende cómo se crea automáticamente y familiarízate con su estructura.
-
-### 7. Estándar de Plantilla de la Página Web 
+### 5. Estándar de Plantilla de la Página Web 
    - **Diseño:**
      - Define un estándar de plantilla que incluya elementos como el carrito, secciones, etc.
      - Puede ser en formato de diseño o descripción de características.
@@ -68,16 +57,10 @@ Nuestro propósito es simplificar procesos laboriosos para las empresas, mejoran
      - Crea un programa que envíe datos a la plantilla web.
      - Implementa funcionalidades administrativas para añadir y editar fácilmente.
 
-### 9. Crear Servidor para Alojar el Proyecto (Ferri)
+### 9. Crear Servidor para Alojar el Proyecto
    - **Configuración:**
      - Configura un servidor para alojar el proyecto web.
-     - Asegúrate de que el entorno cumpla con los requisitos de Laravel y PostgreSQL.
-
-### 10. Configuración de Odoo para Personalización de Productos 
-   - **Guía de Configuración:**
-     - Documenta una guía simple y fácil para que los usuarios configuren y personalicen sus productos en Odoo.
-
-  
+     - Asegúrate de que el entorno cumpla con los requisitos de Laravel.
 
 ## Instalación
 Instrucciones para instalar y configurar el proyecto localmente.
@@ -112,26 +95,20 @@ Lista de problemas conocidos o desafíos actuales en el proyecto.
 3. **Mejora en la Experiencia del Usuario:**
    - Continuar optimizando la interfaz de usuario para garantizar una experiencia intuitiva y amigable.
 
-4. **Gestión de Proyectos y Colaboración:**
-   - Desarrollar un módulo de gestión de proyectos que facilite la colaboración entre equipos y mejore la coordinación.
-
-5. **Implementación de Seguridad Avanzada:**
+4. **Implementación de Seguridad Avanzada:**
    - Reforzar la seguridad del sistema mediante la implementación de medidas avanzadas, como autenticación de dos factores y cifrado mejorado.
 
-6. **Soporte para Múltiples Idiomas y Localización:**
+5. **Soporte para Múltiples Idiomas y Localización:**
    - Habilitar la capacidad de utilizar la plataforma en varios idiomas y adaptarla a diferentes entornos locales.
 
-7. **Integración con Plataformas Externas:**
+6. **Integración con Plataformas Externas:**
    - Explorar la integración con otras plataformas empresariales populares para mejorar la interoperabilidad y la transferencia de datos.
 
-8. **Capacitación y Recursos para Usuarios:**
+7. **Capacitación y Recursos para Usuarios:**
    - Desarrollar materiales de capacitación, tutoriales y documentación detallada para ayudar a los usuarios a aprovechar al máximo todas las funcionalidades.
 
-9. **Mantenimiento y Actualizaciones Regulares:**
+8. **Mantenimiento y Actualizaciones Regulares:**
    - Implementar un plan de mantenimiento regular y garantizar actualizaciones periódicas para incorporar nuevas funciones y abordar problemas de seguridad.
 
-10. **Feedback Continuo de los Usuarios:**
+9. **Feedback Continuo de los Usuarios:**
     - Establecer un sistema de retroalimentación para recopilar comentarios de los usuarios y utilizarlos para realizar mejoras continuas.
-
-## Agradecimientos
-Agradecimientos a contribuyentes, fuentes de inspiración o recursos externos.
