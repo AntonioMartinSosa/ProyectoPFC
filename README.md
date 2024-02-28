@@ -16,8 +16,7 @@ Nuestro propósito es simplificar procesos laboriosos para las empresas, mejoran
 - Bootstrap
 - Node.js
 - Mysql
-- PostgreSQL
-- Odoo
+- Docker
 
 ## Objetivos a corto plazo
 
